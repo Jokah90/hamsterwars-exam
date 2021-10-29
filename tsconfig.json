@@ -22,5 +22,5 @@
   },
   "include": [
     "src"
-  ]
+, "backend/validation.js", "backend/database.js", "backend/src"  ]
 }

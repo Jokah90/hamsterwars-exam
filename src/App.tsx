@@ -1,10 +1,17 @@
-import React from 'react';
 import './App.css';
 
 function App() {
 	return (
-		<div className="App">
-			<h1>hello hamster enthusiast</h1>
+		<div className="app">
+		<header>
+			<h1> Fullstack app </h1>
+			<nav>
+				TODO: Router links
+			</nav>
+		</header>
+		<main>
+			TODO: switch components
+		</main>
 		</div>
 	);
 }
