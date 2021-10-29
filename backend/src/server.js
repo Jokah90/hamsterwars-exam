@@ -14,6 +14,9 @@ app.use(cors());
 // middleware
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
+app.use( express.static(__dirname + '/../../build') ) 
+// Lägg till map för bilderna KOM IHÅG
+
 
 //Logger
 app.use((req, res, next) => {
@@ -23,12 +26,16 @@ app.use((req, res, next) => {
   next();
 });
 
-// app.use('/web', express.static(__dirname + '/../frontend'))
 
 
 // routes / endpoints
 app.use('/hamsters', router)
 app.use('/matches', routerMatches);
+
+
+app.get('*', (req, res) => {
+	res.sendFile(__dirname + '/../../build/index.html')
+})
 
 // starta servern
 app.listen(PORT, () => {
