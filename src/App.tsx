@@ -1,19 +1,44 @@
-import './App.css';
+import "./App.css";
+import { Link, Route, Switch } from "react-router-dom";
+import LandingPage from "./components/landingPage/LandingPage";
+import Home from "./components/home/Home";
+import NavBar from "./components/navBar/NavBar";
+import Tournament from "./components/tournament/Tournament";
+import Logs from "./components/history/History";
+import Gallery from "./components/gallery/Gallery";
 
 function App() {
-	return (
-		<div className="app">
-		<header>
-			<h1> Fullstack app </h1>
-			<nav>
-				TODO: Router links
-			</nav>
-		</header>
-		<main>
-			TODO: switch components
-		</main>
-		</div>
-	);
+  return (
+    <div className="app">
+      <Switch>
+
+        <Route path="/home">
+          <NavBar />
+          <Home />
+        </Route>
+
+        <Route path="/tournament">
+		<NavBar />
+          <Tournament />
+        </Route>
+
+		<Route path="/gallery"> 
+		<NavBar />
+		<Gallery />
+		</Route>
+
+        <Route path="/history">
+		<NavBar />
+          <Logs />
+        </Route>
+
+        <Route path="/">
+          <LandingPage />
+        </Route>
+
+      </Switch>
+    </div>
+  );
 }
 
 export default App;
