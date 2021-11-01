@@ -1,5 +1,4 @@
-const { connect } = require('../database.js')
-const db = connect()
+const { db } = require('../database.js')
 
 const HAMSTERS = 'hamsters'
 

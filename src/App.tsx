@@ -1,5 +1,5 @@
 import "./App.css";
-import { Link, Route, Switch } from "react-router-dom";
+import { Route, Switch } from "react-router-dom";
 import LandingPage from "./components/landingPage/LandingPage";
 import Home from "./components/home/Home";
 import NavBar from "./components/navBar/NavBar";
@@ -12,30 +12,16 @@ function App() {
     <div className="app">
       <Switch>
 
-        <Route path="/home">
-          <NavBar />
-          <Home />
-        </Route>
+        <Route path="/home"><NavBar /><Home /></Route>
 
-        <Route path="/tournament">
-		<NavBar />
-          <Tournament />
-        </Route>
+        <Route path="/tournament"><NavBar /><Tournament /></Route>
 
-		<Route path="/gallery"> 
-		<NavBar />
-		<Gallery />
-		</Route>
+        <Route path="/gallery"><NavBar /><Gallery /></Route>
 
-        <Route path="/history">
-		<NavBar />
-          <Logs />
-        </Route>
+        <Route path="/history"><NavBar /><Logs /></Route>
 
-        <Route path="/">
-          <LandingPage />
-        </Route>
-
+        <Route path="/"><LandingPage /></Route>
+		
       </Switch>
     </div>
   );

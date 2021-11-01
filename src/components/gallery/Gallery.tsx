@@ -1,12 +1,34 @@
+import { useEffect, useState } from 'react'
+import { Hamster } from '../../models/models'
+
+
 const Gallery = () => {
-	return ( 
-		<div>
-			<h1>Gallery of hamsters</h1>
+	const [data, setData] = useState<Hamster[] | null>(null)
 
-			<p>Render hamster api here  /get all</p>
+	useEffect(() => {
+		sendRequest(setData)
+	}, [])
 
-		</div>
-	 );
+	return (
+		<main className="grid-container">
+		{data
+		? data.map(hamster => (
+			<figure className="hamster-cards"key={hamster.id}>
+				{hamster.name}
+			<img src={`/img/${hamster.imgName}`} alt={hamster.name} />
+			</figure>
+		))
+		: 'Loading fighters...' }
+		</main>
+	)
 }
- 
-export default Gallery;
+
+async function sendRequest(saveData: any) {
+	const response = await fetch('/hamsters')
+	const data = await response.json()
+	saveData(data)
+	console.log(data)
+
+}
+
+export default Gallery

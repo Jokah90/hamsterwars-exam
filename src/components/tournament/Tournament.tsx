@@ -1,7 +1,4 @@
-interface Props {
-	
-}
- 
+
 const Tournament = () => {
 	return ( 
 		<div>
