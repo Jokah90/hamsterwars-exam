@@ -1,9 +1,18 @@
+nav {
+	height: 5rem;
+	background-color: rgb(104, 105, 104);
+	align-items: center;
+}
+
+
 .nav-bar {
 	display: flex;
-	flex-direction: row;
-	justify-content: space-around;	 
-    font-weight: bold;  
+	justify-content: space-evenly;
+	align-items: center;	
+    list-style: none;
 }
+
+
 
 li a{
 	text-decoration: none;
