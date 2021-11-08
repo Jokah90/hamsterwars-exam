@@ -5,16 +5,28 @@
 
 // Om det av någon anledning inte går att nå backend-servern så ska du visa ett användarvänligt felmeddelande här. Användaren ska också få möjligheten att försöka igen.
  
-const Home = () => {
-	return ( 
-		<div>
-			<section>
-				
-				<h1>Description of the game mechanics</h1>
 
-			</section>
-		</div>
-	 );
+
+const Home = () => {
+
+    return (     
+	  <section>
+		  <h1> Welcome to Hamster Wars</h1>
+		  <p>Are you ready to battle it out?</p>
+
+<h2> Instructions </h2>
+
+<p> You just got summoned to the game and is about to enter the ultimate gladiatorpit!
+	But first, you need instructions.
+	
+	Use the navigationtool to explore the mighty arena! 
+</p>
+
+<h3> Good luck! </h3>
+	</section>
+    )
 }
- 
+
+
+
 export default Home;

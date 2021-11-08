@@ -1,19 +1,23 @@
+import { Link } from "react-router-dom";
+import styles from "../../styles/landingpage.module.css";
 
-import { Link } from 'react-router-dom';
-
- 
 const LandingPage = () => {
-	return ( 
-	<>
-		<section className="container">
-		<h1>HAMSTER WARS</h1>
-		<h3>The legend starts here</h3>
-		<Link to="/home">  
-		<button>START</button>
-		</Link>
-		</section>
-	</>
-	 );
-}
- 
+  return (
+    <div className={styles.container}>
+      <div className="hero-img">
+        <img
+          className="bg_image"
+          src="./assets/bg_image.jpg"
+          alt="black background"
+        />
+		<div>
+		<Link to="/home">
+          <button>START</button>
+        </Link>
+		</div>
+      </div>
+    </div>
+  );
+};
+
 export default LandingPage;

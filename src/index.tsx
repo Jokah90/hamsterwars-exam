@@ -8,11 +8,11 @@ import { BrowserRouter } from 'react-router-dom';
 
 ReactDOM.render(
   <React.StrictMode>
-    <BrowserRouter>
       <RecoilRoot>
+    <BrowserRouter>
         <App /> 
-      </RecoilRoot> 
     </BrowserRouter>
+	</RecoilRoot> 
   </React.StrictMode>,
   document.getElementById('root')
 );
