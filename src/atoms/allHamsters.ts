@@ -1,16 +1,12 @@
 import { atom } from "recoil";
 import { Hamster } from "../models/models";
 
-
-const allHamsters = atom<Hamster[] | null>({
+//Gallery State
+const allHamsters = atom<Hamster[]>({
 	key: 'allHamsters',
 	default: []
 })
 
 
 
-
-
-
-
-export { allHamsters }
+export default allHamsters 

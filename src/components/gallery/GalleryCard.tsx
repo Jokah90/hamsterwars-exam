@@ -1,42 +1,50 @@
 import { useEffect } from "react";
 import { useRecoilState } from "recoil";
-import { allHamsters } from "../../atoms/atoms";
+import  allHamsters  from "../../atoms/allHamsters";
 import { Hamster } from "../../models/models";
-import styles from "../../styles/gallerycard.module.css"
-
+import styles from "../../styles/gallerycard.module.css";
+import { DeleteHamster } from "../helperFunctions/Helpers";
 
 const GalleryCard = () => {
-  const [data, setData] = useRecoilState<Hamster[] | null>(allHamsters);
+  const [data, setData] = useRecoilState<Hamster[]>(allHamsters);
 
   useEffect(() => {
     sendRequest(setData);
   }, []);
 
+  const removeHamsterObject = (hamsterId: string) => {
+    setData((data) =>
+      data.filter((hamsterObject) => hamsterObject.id !== hamsterId)
+    );
+  };
+
   return (
-	  <div className={styles.wrapper}>
-
-	<section className={styles.card}>
-
+    <div className={styles.wrapper}>
       {data
         ? data.map((hamster) => (
-			
-           	<><img
-				src={`/img/${hamster.imgName}`}
-				alt={hamster.name}
-				key={hamster.id}
-				className="card__img" />
-				<div className={styles.card__body}>
-					<h2 className={styles.card__title}>{hamster.name}</h2>
-					<p className={styles.card__description}>{hamster.loves}</p>
-					<button className={styles.card__delete}>❌</button>
-					<button className={styles.card__edit}>🖊️</button>
-				</div></>
-
+            <section className={styles.card} key={hamster.id}>
+              <img
+                src={`/img/${hamster.imgName}`}
+                alt={hamster.name}
+                key={hamster.id}
+                className="card__img"
+              />
+              <div className={styles.card__body}>
+                <h2 className={styles.card__title}>{hamster.name}</h2>
+                <button
+                  className={styles.card__delete}
+                  onClick={() => {
+                    DeleteHamster(hamster.id);
+                    removeHamsterObject(hamster.id);
+                  }}
+                >
+                  Remove
+                </button>
+              </div>
+            </section>
           ))
         : "Loading"}
-	</section>
-	</div>
-  
+    </div>
   );
 };
 
