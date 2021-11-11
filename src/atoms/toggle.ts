@@ -1,11 +1,11 @@
 import { atom } from "recoil";
 
 //Gallery State
-const toggle = atom<boolean>({
+const Toggle = atom<boolean>({
 	key: 'toggle',
 	default: false
 })
 
 
 
-export default toggle 
+export default Toggle 

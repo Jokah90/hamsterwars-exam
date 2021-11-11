@@ -16,9 +16,7 @@ const AddHamster = () => {
 		
 		setAge(e.target.valueAsNumber)
 	}
-		
 	
-
 	const [favFood, setFaveFood] = useState('');
 	const handleFaveFoodChange = (e: string | any ) => setFaveFood(e.target.value);
 

@@ -1,4 +1,6 @@
 import AddHamster from "./AddHamster";
+import { useRecoilState } from "recoil"
+import  atomToggle  from "../../atoms/Toggle";
 import GalleryCard from "./GalleryCard";
 import styles from "../../styles/gallery.module.css"
 // Galleri
@@ -10,11 +12,15 @@ import styles from "../../styles/gallery.module.css"
 // Tänk på att inte visa för mycket information direkt. Låt användaren klicka/hovra över en bild för att visa mer information.
 
 const Gallery = () => {
+	const [toggle, setToggle] = useRecoilState<boolean>(atomToggle);
 
 
   return (
 	  <div>
 		<header>
+			<button onClick={() => setToggle(!toggle)}>ADD HAMSTER</button>
+			{toggle && <AddHamster />}
+
 		</header>
     	<main className={styles.main}>
 			<GalleryCard  />
