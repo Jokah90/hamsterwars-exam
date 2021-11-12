@@ -4,17 +4,28 @@ import styles from "../../styles/landingpage.module.css";
 const LandingPage = () => {
   return (
     <div className={styles.container}>
-      <div className="hero-img">
-        <img
-          className="bg_image"
-          src="./assets/bg_image.jpg"
+      <div className={styles.heroImg}>
+     
+
+		<img
+          src="./assets/title.png"
           alt="black background"
         />
-		<div>
-		<Link to="/home">
-          <button>START</button>
+
+        <img
+          src="./assets/iconImg.png"
+          alt="black background"
+        />
+
+        <Link to="/home">
+        <button className={styles.startBtn}>
+		<img
+            src="./assets/startBtn.png"
+            alt="black background"
+			/>
+		</button>
+       
         </Link>
-		</div>
       </div>
     </div>
   );

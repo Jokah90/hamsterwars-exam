@@ -1,20 +1,32 @@
 .navbarWrapper {
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
     margin: 0 auto;
-    padding: 1.2em 0 0 0;
+    padding: 1.2em 0 1.2em 0;
     text-align: center; 
     font-size: 1.2em;
+	background-color: rgb(73, 72, 72);
+	color: white;
+	border-bottom: 4px solid gold;
+}
+
+.headLine {
+	padding-right: 2rem;
+	cursor: pointer;
+}
+
+.diffColor {
+	color: yellow;
 }
 
 .link {
-    color: var(--white);
+   color: rgb(230, 220, 220);
     margin: 0 .5em;
     text-decoration: none;
 }
 
 .link:hover {
-	color: grey;
+	color: yellow;
 }
 

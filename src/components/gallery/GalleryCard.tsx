@@ -10,7 +10,7 @@ const GalleryCard = () => {
 
   useEffect(() => {
     sendRequest(setData);
-  }, []);
+  }, [setData]);
 
   const removeHamsterObject = (hamsterId: string) => {
     setData((data) =>
@@ -22,7 +22,7 @@ const GalleryCard = () => {
     <div className={styles.wrapper}>
       {data
         ? data.map((hamster) => (
-            <section className={styles.card} key={hamster.id}>
+            <section className={styles.card} key={Math.random() + hamster.id}>
               <img
                 src={`/img/${hamster.imgName}`}
                 alt={hamster.name}
@@ -33,12 +33,10 @@ const GalleryCard = () => {
                 <h2 className={styles.card__title}>{hamster.name}</h2>
                 <button
                   className={styles.card__delete}
-                  onClick={() => {
-                    DeleteHamster(hamster.id);
-                    removeHamsterObject(hamster.id);
+                  onClick={() => {DeleteHamster(hamster.id);removeHamsterObject(hamster.id);
                   }}
                 >
-                  Remove
+                  Delete
                 </button>
               </div>
             </section>
