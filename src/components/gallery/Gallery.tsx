@@ -1,8 +1,7 @@
 import AddHamster from "./AddHamster";
-import { useRecoilState } from "recoil";
-import atomToggle from "../../atoms/Toggle";
 import GalleryCard from "./GalleryCard";
 import styles from "../../styles/gallery.module.css";
+import { useState } from "react";
 // Galleri
 // Här ska appen visa alla hamstrars namn och bild, i ett CSS grid. KLAR
 
@@ -11,7 +10,7 @@ import styles from "../../styles/gallery.module.css";
 // Tänk på att inte visa för mycket information direkt. Låt användaren klicka/hovra över en bild för att visa mer information.
 
 const Gallery = () => {
-  const [toggle, setToggle] = useRecoilState<boolean>(atomToggle);
+  const [toggle, setToggle] = useState<boolean>(false);
 
   return (
     <div className={styles.container}>
