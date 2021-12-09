@@ -3,6 +3,7 @@ const router = express.Router();
 const { db } = require("../database.js");
 const HAMSTERS = "hamsters";
 const MATCHES = "matches";
+// const clear = require('../scripts/clear')
 
 const { isHamsterObject, isHamsterChanged } = require("../validation.js");
 
@@ -90,6 +91,11 @@ router.delete("/:id", async (req, res) => {
   }
 });
 
+// router.get('/clear', (req, res) => {
+//   clear()
+//   res.status(200).send('Killed all hamsters')
+// })
+
 //******************** ASYNC FUNCTIONS ******************************// */
 
 // SCRIPT GET ALL
@@ -125,6 +131,7 @@ async function getOne(id, collection) {
 }
 
 async function cutest() {
+  // Hämta snapshot
   const docSnapshot = await db.collection(HAMSTERS).get();
 
   let resultArray = [];

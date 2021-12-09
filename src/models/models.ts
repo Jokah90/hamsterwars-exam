@@ -1,22 +1,22 @@
 export interface Hamster {
-	name: string;
-    age: number;
-    favFood: string;
-    loves: string;
-    imgName: string;
-    wins: number;
-    defeats: number;
-    games: number;
-	id: string;
+  name: string;
+  age: number;
+  favFood: string;
+  loves: string;
+  imgName: string;
+  wins: number;
+  defeats: number;
+  games: number;
+  id: string;
 }
 
 export interface Data {
-	name: string;
-    age: number;
-    favFood: string;
-    loves: string;
-    imgName: string;
-    wins: number;
-    defeats: number;
-    games: number;
+  name: string;
+  age: number;
+  favFood: string;
+  loves: string;
+  imgName: string;
+  wins: number;
+  defeats: number;
+  games: number;
 }

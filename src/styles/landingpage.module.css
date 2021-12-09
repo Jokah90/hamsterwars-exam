@@ -1,34 +1,33 @@
 .container {
-	height: 100vh;
-	width: 100vw;
+  height: 100vh;
+  width: 100vw;
 }
 
 .heroImg {
-	height: 100vh;
-	width: 100vw;
-	background-image: url(../assets/bg_image.jpg);
-	background-repeat: no-repeat;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: space-around;
-	text-align: center;
+  height: 100vh;
+  width: 100vw;
+  background-image: url(../assets/bg_image.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  text-align: center;
 }
 
 main {
-	height: 100vh;
-	width: 100vw;
+  height: 100vh;
+  width: 100vw;
 }
 
-.startBtn{
-	border: none;
-	background: transparent;
-	cursor: pointer;
+.startBtn {
+  border: none;
+  background: transparent;
+  cursor: pointer;
 }
-.startBtn:hover{
-	border: none;
-	background: transparent;
-	cursor: pointer;
+.startBtn:hover {
+  border: none;
+  background: transparent;
+  cursor: pointer;
 }
-
-

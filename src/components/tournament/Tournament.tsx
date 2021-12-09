@@ -6,17 +6,12 @@ import GetRandom from "./GetRandom";
 
 // VG: Utöver att uppdatera hamster-objekten i databasen, ska du lägga till ett match-objekt i databasen.
 
-
 const Tournament = () => {
-
-
-
-	return ( 
-		<div>
-	
-		<GetRandom />
-		</div>
-	 );
-	}
+  return (
+    <div>
+      <GetRandom />
+    </div>
+  );
+};
 
 export default Tournament;

@@ -17,4 +17,6 @@ async function populate() {
         }
         db.collection(HAMSTERS).add(newObject)
     })
+
+    console.log('Hamsters reborn')
 }

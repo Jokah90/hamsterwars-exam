@@ -73,8 +73,8 @@ const changeData = (data: string) => {
   }
 };
 
-const updateMatch = (winner: Hamster, loser: Hamster) => {
-  fetch(`hamsters/${winner.id}`, {
+const updateMatch = async (winner: Hamster, loser: Hamster) => {
+  await fetch(`hamsters/${winner.id}`, {
     method: "PUT",
     headers: {
       "Content-Type": "application/json",
@@ -85,15 +85,15 @@ const updateMatch = (winner: Hamster, loser: Hamster) => {
     }),
   });
 
-  fetch(`hamsters/${loser.id}`, {
+  await fetch(`hamsters/${loser.id}`, {
     method: "PUT",
     headers: {
       "Content-Type": "application/json",
     },
     body: JSON.stringify({
-      wins: winner.wins,
-      defeats: winner.defeats + 1,
-      games: winner.games + 1,
+      wins: loser.wins,
+      defeats: loser.defeats + 1,
+      games: loser.games + 1,
     }),
   });
 };

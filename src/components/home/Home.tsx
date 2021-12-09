@@ -10,6 +10,7 @@ import styles from "../../styles/home.module.css";
 
 // Om det av någon anledning inte går att nå backend-servern så ska du visa ett användarvänligt felmeddelande här. Användaren ska också få möjligheten att försöka igen.
 
+// brb
 const Home = () => {
   const [cutest, setCutest] = useRecoilState<Hamster[]>(allHamsters);
   console.log(cutest);
@@ -46,8 +47,11 @@ const Home = () => {
                 />
                 <div className={styles.card__body}>
                   <h2 className={styles.card__title}>{hamster.name}</h2>
-                  <p>is currently the cutest hamster, but things can change!</p>
-                  <p>Winning streak: {hamster.wins}!</p>
+                  <p>
+                    is currently the cutest hamster... <br /> but things can
+                    change!
+                  </p>
+                  <p>Wins: {hamster.wins}!</p>
                 </div>
               </section>
             ))
@@ -56,7 +60,7 @@ const Home = () => {
     </section>
   );
 };
-async function sendRequest(setCutest: any) {
+async function sendRequest(setCutest: (hamster: Hamster[]) => void) {
   try {
     const response = await fetch("/hamsters/cutest");
     const data = await response.json();
