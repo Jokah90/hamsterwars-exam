@@ -28,7 +28,7 @@ app.use((req, res, next) => {
   next();
 });
 
-app.use('/img', express.static(__dirname + '/images/hamsters'));
+// app.use('/img', express.static(__dirname + '/images/hamsters'));
 
 
 // routes / endpoints
