@@ -39,8 +39,8 @@ app.use('/hamsters', router)
 app.use('/matches', routerMatches);
 
 
-app.get('*', (req, res) => {
-	res.sendFile(path.join()(__dirname, "../build/index.html"));
+app.get("*", (req, res) => {
+	res.sendFile(path.join(__dirname, "../build/index.html"));
 })
 
 // starta servern
