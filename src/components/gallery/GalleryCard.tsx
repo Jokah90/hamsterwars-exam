@@ -1,5 +1,4 @@
-import { title } from "process";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { useRecoilState } from "recoil";
 import allHamsters from "../../atoms/allHamsters";
 import { Hamster } from "../../models/models";
@@ -27,9 +26,9 @@ const GalleryCard = ({ hamster }: HamsterCard) => {
     setShowText(false);
   };
 
-  // useEffect(() => {
-  //   sendRequest(setData);
-  // }, [setData]);
+  //   useEffect(() => {
+  //     sendRequest(setData);
+  //   }, [setData]);
 
   const removeHamsterObject = (hamsterId: string) => {
     setData((h) => h.filter((hamsterObject) => hamsterObject.id !== hamsterId));
@@ -104,11 +103,11 @@ const GalleryCard = ({ hamster }: HamsterCard) => {
   );
 };
 
-async function sendRequest(setData: any) {
-  const response = await fetch("/hamsters");
-  const data = await response.json();
-  setData(data);
-  console.log(data);
-}
+// async function sendRequest(setData: any) {
+//   const response = await fetch("/hamsters");
+//   const data = await response.json();
+//   setData(data);
+//   console.log(data);
+// }
 
 export default GalleryCard;

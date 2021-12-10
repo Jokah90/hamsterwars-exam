@@ -1,4 +1,4 @@
-import { SetStateAction, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { Hamster } from "../../models/models";
 import styles from "../../styles/getrandom.module.css";
 import { updateMatch } from "../helperFunctions/Helpers";

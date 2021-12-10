@@ -1,12 +1,10 @@
 import { FormEvent, useState } from "react";
 import { useRecoilState } from "recoil";
 import allHamsters from "../../atoms/allHamsters";
-import { Hamster } from "../../models/models";
 // import { isValidElement, useState } from "react";
 
 import {
   addOne,
-  isValidImg,
   isValidString,
   isValidLoves,
   isValidFavFood,
@@ -14,7 +12,7 @@ import {
 } from "../helperFunctions/Helpers";
 
 const AddHamster = () => {
-  const [hamsters, setHamsters] = useRecoilState(allHamsters);
+  const [, setHamsters] = useRecoilState(allHamsters);
   const [name, setName] = useState<string>("");
   const [age, setAge] = useState(0);
   const [favFood, setFaveFood] = useState("");
