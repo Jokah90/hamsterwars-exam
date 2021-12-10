@@ -13,7 +13,6 @@ import styles from "../../styles/home.module.css";
 // brb
 const Home = () => {
   const [cutest, setCutest] = useRecoilState<Hamster[]>(allHamsters);
-  console.log(cutest);
 
   useEffect(() => {
     sendRequest(setCutest);
@@ -65,7 +64,6 @@ async function sendRequest(setCutest: (hamster: Hamster[]) => void) {
     const response = await fetch("/hamsters/cutest");
     const data = await response.json();
     setCutest(data);
-    console.log(data);
   } catch (error) {
     console.log(error);
   }

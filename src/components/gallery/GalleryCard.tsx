@@ -103,11 +103,4 @@ const GalleryCard = ({ hamster }: HamsterCard) => {
   );
 };
 
-// async function sendRequest(setData: any) {
-//   const response = await fetch("/hamsters");
-//   const data = await response.json();
-//   setData(data);
-//   console.log(data);
-// }
-
 export default GalleryCard;

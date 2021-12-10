@@ -18,7 +18,7 @@ app.use(cors());
 // middleware
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-app.use( express.static(__dirname + '/../build') ) 
+app.use(express.static(__dirname + '/../build') ) 
 // Lägg till map för bilderna KOM IHÅG
 
 
