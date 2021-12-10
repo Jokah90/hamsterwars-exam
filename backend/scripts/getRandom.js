@@ -10,5 +10,5 @@ async function getRandom() {
   const docSnapshot = await docRef.get();
   
   const hamsterArray = await getAllHamsters()
-  let randomHamster = hamsterArray[Math.floor(Math.random()*hamsterArray.length)
+  let randomHamster = hamsterArray[Math.floor(Math.random()*hamsterArray.length)]
 }

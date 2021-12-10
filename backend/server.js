@@ -1,11 +1,13 @@
 // importera paket
-const path = require('path');
 
 const express = require('express')
 const app = express()
 const router = require('./routes/router.js')
 const routerMatches = require('./routes/routesMatches.js')
 const cors = require('cors')
+const path = require('path');
+
+
 
 let count = 0;
 
